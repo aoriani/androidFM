@@ -57,7 +57,7 @@ class Si4703_Breakout{
         int seekUp();                   // returns the tuned channel or 0
         int seekDown();
         void setVolume(int volume);     // 0 to 15
-        byte getVolune();
+        byte getVolume();
         void toggleMute();
         void readRDS(char *message, long timeout);
         int getChannel();
@@ -117,7 +117,7 @@ class Si4703_Breakout{
         int  _sdioPin;
         int  _sclkPin;
         void readRegisters();
-        bool updateRegisters();
+        boolean updateRegisters();
         int seek(byte seekDirection);
         
         uint16_t si4703_registers[16]; //There are 16 registers, each 16 bits large

@@ -109,9 +109,9 @@ byte Si4703_Breakout::getVolume(){
 }
 
 void Si4703_Breakout::toggleMute(){
-  si4703_readRegisters();
+  readRegisters();
   si4703_registers[POWERCFG] ^= (1<<DMUTE); //Toggle Mute bit
-  si4703_updateRegisters();
+  updateRegisters();
 }
 
 void Si4703_Breakout::readRDS(char *buffer, long timeout){
